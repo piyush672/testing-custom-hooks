@@ -1,6 +1,5 @@
 // include this section and the NativeAnimatedHelper section for mocking react-native-reanimated
 import '@testing-library/react-native/extend-expect';
-import { RootState } from '../src/redux/store';
 
 jest.mock('@react-navigation/native', () => ({
     ...jest.requireActual('@react-navigation/native'),
@@ -15,5 +14,7 @@ jest.mock('@react-navigation/native-stack', () => ({
 }));
 
 jest.mock('react-redux', () => ({
-    useSelector: jest.fn()
-}))
+    useSelector: jest.fn(),
+    useDispatch: jest.fn(),
+}));
+

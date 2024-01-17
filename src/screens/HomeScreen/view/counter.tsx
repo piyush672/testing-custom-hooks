@@ -7,7 +7,6 @@ interface ICounterProps {
     decrementCounter: () => void
 }
 function Counter(props: ICounterProps) {
-    console.log("sdsadsa", props.counter)
     return (
         <View style={style.main}>
             <Text testID='counter'>{props.counter}</Text>
